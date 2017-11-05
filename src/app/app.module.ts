@@ -7,6 +7,7 @@ import { MyApp } from './app.component';
 import {WelcomePage} from '../pages/welcome/welcome';
 import {ActuListPage} from '../pages/actus-list/actus-list';
 import {ActuDetailPage} from '../pages/actu-detail/actu-detail';
+import {ActuCreatePage} from '../pages/actus-create/actus-create';
 import {ContactListPage} from '../pages/contact-list/contact-list';
 import {ContactDetailPage} from '../pages/contact-detail/contact-detail';
 import {FavoriteListPage} from '../pages/favorite-list/favorite-list';
@@ -26,6 +27,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ActuListPage,
     ActuDetailPage,
+    ActuCreatePage,
     ContactListPage,
     ContactDetailPage,
     FavoriteListPage,
@@ -43,6 +45,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ActuListPage,
     ActuDetailPage,
+    ActuCreatePage,
     ContactListPage,
     ContactDetailPage,
     FavoriteListPage,

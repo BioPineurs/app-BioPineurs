@@ -5,6 +5,7 @@ import {SplashScreen} from '@ionic-native/splash-screen';
 
 import {ContactListPage} from '../pages/contact-list/contact-list';
 import {ActuListPage} from '../pages/actus-list/actus-list';
+import {ActuCreatePage} from '../pages/actus-create/actus-create';
 import {FavoriteListPage} from '../pages/favorite-list/favorite-list';
 import {WelcomePage} from '../pages/welcome/welcome';
 import {AboutPage} from '../pages/about/about';
@@ -33,6 +34,7 @@ export class MyApp {
 
         this.appMenuItems = [
             {title: 'Actus', component: ActuListPage, icon: 'bonfire'},
+            {title: 'Créer actu', component: ActuCreatePage, icon: 'bonfire'},
             {title: 'En savoir plus sur le master', component: InformationPage, icon: 'bulb'},
             {title: 'Annuaire', component: ContactListPage, icon: 'contacts'},
             {title: 'Favorites', component: FavoriteListPage, icon: 'star'}

@@ -1,0 +1,36 @@
+<ion-header>
+
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Raconte ta vie</ion-title>
+    </ion-navbar>
+</ion-header>
+ 
+<ion-content class="actu-create">
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary">Titre</ion-label>
+      <ion-input [(ngModel)] = "title" type="text" placeholder="Titre"></ion-input>
+    </ion-item>
+<!--
+    <ion-item>
+      <ion-label color="primary">Auteur</ion-label>
+      <ion-input [(ngModel)]="author" type="text" placeholder="Auteur" ></ion-input>
+    </ion-item>
+  -->
+  <ion-item>
+    <ion-label color="primary">Auteur</ion-label>
+    <ion-select [(ngModel)]="author" placeholder="Appuyez pour choisir">
+        <ion-option *ngFor="let contact of contacts">{{contact.firstName}} {{contact.lastName}}<</ion-option>
+    </ion-select>
+  </ion-item>
+
+    <ion-item>
+      <ion-label color="primary">Contenu</ion-label>
+      <ion-input [(ngModel)]="body" type="text" placeholder="Racontez votre vie ici"></ion-input>
+    </ion-item>
+  </ion-list>
+   <button ion-button item-right (click)="postRequest()">Poster :)</button>
+</ion-content>

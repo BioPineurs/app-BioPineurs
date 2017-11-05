@@ -1,6 +1,6 @@
-# Show Tonight
+# Biopineurs
 
-Show Tonight is a sample application that demonstrates how to build mobile apps with Ionic 3 for HackX. 
+BioPineurs est l'application des biopineurs pour les biopineurs. Retrouvez l'annuaire et les actualités du master au même endroit !
 
 ## Installation Instructions
 
@@ -14,12 +14,12 @@ Follow these instructions to install the app and run it with the data services:
 
 1. Clone the repository:
     ```
-    git clone https://github.com/Hack-X/ShowTonight
+    git clone https://github.com/BioPineurs/app-BioPineurs.git
     ```
 
 1. Navigate to the `ShowTonight` directory :
     ```
-    cd showtonight
+    cd app-Biopineurs
     ```
 
 1. Install the dependencies

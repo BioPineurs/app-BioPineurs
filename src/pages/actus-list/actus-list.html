@@ -10,40 +10,48 @@
 </ion-header>
 
 <ion-content class="actu-list">
-
+    
 
     <ion-list *ngIf="viewMode==='list'">
+
         <ion-item-sliding *ngFor="let actu of actus">
-            
+            <ion-item>
+                <ion-card>
             <!--
                 <ion-thumbnail item-left>
                     <img src="{{actu.image}}"/>
                 </ion-thumbnail>
             -->
+                    <ion-item>
+                       <h2>{{actu.author}}</h2>
+                       <p>{{actu.createdAt}}</p>
+                    </ion-item>
                     <button ion-item (click)="openActuDetail(actu)">
                     {{actu.title}}
-                    <p>{{actu.createdAt}}</p>
-                    <p>{{actu.author}}</p>
                     <p>{{actu.body}}</p>        
                     </button>
-
-
-
                     <ion-item-options>
                         <button danger (click)="deleteItem(actu)">Delete</button>
                     </ion-item-options>
-                
-            
+                </ion-card>
+            </ion-item>
         </ion-item-sliding>
     </ion-list>
 
+<!--
     <div *ngIf="viewMode==='map'" style="width:100%;height:100%;" id="map"></div>
+-->
 
+<style>
+  .social-cards ion-col {
+    padding: 0;
+  }
+</style>
 
-      <ion-refresher (ionRefresh)="doRefresh($event)"><ion-refresher-content></ion-refresher-content>
+<ion-refresher (ionRefresh)="doRefresh($event)"><ion-refresher-content></ion-refresher-content>
     </ion-refresher>
 </ion-content>
-
+<!--
 <ion-footer padding>
     <ion-segment [(ngModel)]="viewMode">
         <ion-segment-button value="list">
@@ -54,3 +62,4 @@
         </ion-segment-button>
     </ion-segment>
 </ion-footer>
+-->

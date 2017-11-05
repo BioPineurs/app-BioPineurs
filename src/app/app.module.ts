@@ -5,12 +5,16 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import {WelcomePage} from '../pages/welcome/welcome';
-import {ShowListPage} from '../pages/show-list/show-list';
-import {ShowDetailPage} from '../pages/show-detail/show-detail';
+import {ActuListPage} from '../pages/actus-list/actus-list';
+import {ActuDetailPage} from '../pages/actu-detail/actu-detail';
+import {ContactListPage} from '../pages/contact-list/contact-list';
+import {ContactDetailPage} from '../pages/contact-detail/contact-detail';
 import {FavoriteListPage} from '../pages/favorite-list/favorite-list';
 import {AboutPage} from '../pages/about/about';
+import {InformationPage} from '../pages/information/information';
 
-import {ShowService} from "../providers/show-service-rest";
+import {ActuService} from "../providers/actu-service-rest";
+import {ContactService} from "../providers/contact-service-rest";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -20,9 +24,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     WelcomePage,
     AboutPage,
-    ShowListPage,
-    ShowDetailPage,
-    FavoriteListPage
+    ActuListPage,
+    ActuDetailPage,
+    ContactListPage,
+    ContactDetailPage,
+    FavoriteListPage,
+    InformationPage
   ],
   imports: [
     BrowserModule,
@@ -34,14 +41,18 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     WelcomePage,
     AboutPage,
-    ShowListPage,
-    ShowDetailPage,
-    FavoriteListPage
+    ActuListPage,
+    ActuDetailPage,
+    ContactListPage,
+    ContactDetailPage,
+    FavoriteListPage,
+    InformationPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    ShowService,
+    ActuService,
+    ContactService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

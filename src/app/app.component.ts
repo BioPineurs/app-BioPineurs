@@ -3,10 +3,12 @@ import {Nav, Platform} from 'ionic-angular';
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 
-import {ShowListPage} from '../pages/show-list/show-list';
+import {ContactListPage} from '../pages/contact-list/contact-list';
+import {ActuListPage} from '../pages/actus-list/actus-list';
 import {FavoriteListPage} from '../pages/favorite-list/favorite-list';
 import {WelcomePage} from '../pages/welcome/welcome';
 import {AboutPage} from '../pages/about/about';
+import {InformationPage} from '../pages/information/information';
 
 export interface MenuItem {
     title: string;
@@ -30,7 +32,9 @@ export class MyApp {
         this.initializeApp();
 
         this.appMenuItems = [
-            {title: 'Shows', component: ShowListPage, icon: 'bonfire'},
+            {title: 'Actus', component: ActuListPage, icon: 'bonfire'},
+            {title: 'En savoir plus sur le master', component: InformationPage, icon: 'bulb'},
+            {title: 'Annuaire', component: ContactListPage, icon: 'contacts'},
             {title: 'Favorites', component: FavoriteListPage, icon: 'star'}
         ];
 

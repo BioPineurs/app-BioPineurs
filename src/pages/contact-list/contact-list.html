@@ -1,0 +1,30 @@
+<ion-header>
+
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-searchbar [(ngModel)]="searchKey" (ionInput)="onInput($event)"
+                       (ionCancel)="onCancel($event)"></ion-searchbar>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="contact-list">
+
+    <ion-list *ngIf="viewMode==='list'">
+
+        <ion-item-sliding *ngFor="let contact of contacts">
+            <button ion-item (click)="openContactDetail(contact)">
+                <ion-avatar item-left>
+                    <img src="{{contact.photo}}"/>
+                </ion-avatar>
+                <h2>{{contact.firstName}} <b>{{contact.lastName}}</b></h2>
+            </button>
+            <ion-item-options>
+                <button danger (click)="deleteItem(contact)">Delete</button>
+            </ion-item-options>
+        </ion-item-sliding>
+
+    </ion-list>
+
+</ion-content>

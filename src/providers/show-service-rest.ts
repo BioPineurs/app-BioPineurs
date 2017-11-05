@@ -3,10 +3,10 @@ import {Http, Headers, RequestOptions} from '@angular/http';
 import {SERVER_URL} from './config';
 import 'rxjs/Rx';
 
-let showsURL = SERVER_URL + 'api/shows/';
+let actusURL = SERVER_URL + 'actus/';
 
 @Injectable()
-export class ShowService {
+export class ActuService {
   favoriteCounter: number = 0;
   favorites: Array<any> = [];
 
@@ -15,13 +15,13 @@ export class ShowService {
     }
 
     findAll() {
-        return this.http.get(showsURL)
+        return this.http.get(actusURL)
             .map(res => res.json())
             .toPromise();
     }
 
     findById(id) {
-        return this.http.get(showsURL + "id/" + id)
+        return this.http.get(actusURL + "id/" + id)
             .map(res => res.json())
             .toPromise();
     }

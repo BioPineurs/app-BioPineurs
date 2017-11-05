@@ -17,7 +17,7 @@ Follow these instructions to install the app and run it with the data services:
     git clone https://github.com/BioPineurs/app-BioPineurs.git
     ```
 
-1. Navigate to the `ShowTonight` directory :
+1. Navigate to the `app-Biopineurs` directory :
     ```
     cd app-Biopineurs
     ```

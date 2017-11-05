@@ -24362,12 +24362,31 @@ ion-note {
   font-size: 1.4rem !important;
 }
 
+ion-note {
+  color: #A313B2 !important;
+  font-size: 1.4rem !important;
+}
+
 .searchbar-input {
   box-shadow: none !important;
 }
 
 ion-footer {
   padding: 8px 16px !important;
+}
+
+ion-note {
+  color: #A313B2 !important;
+  font-size: 1.4rem !important;
+}
+
+.searchbar-input {
+  box-shadow: none !important;
+}
+
+.button {
+  margin-left: 30%;
+  margin-right: 30%;
 }
 
 page-welcome {

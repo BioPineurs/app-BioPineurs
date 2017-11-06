@@ -1,4 +1,5 @@
 import {Component, Injectable} from '@angular/core';
+import {ActuListPage} from '../actus-list/actus-list';
 import {FormGroup, FormBuilder, FormControl, Validators} from "@angular/forms";
 import {ActionSheetController, ActionSheet, NavController, NavParams, ToastController} from 'ionic-angular';
 import {Http, Headers, RequestOptions, Response} from '@angular/http';
@@ -19,7 +20,7 @@ export class ActuCreatePage {
   public author;
   public body;
 
-    constructor(public navCtrl: NavController, public formBuilder: FormBuilder, public service: ContactService, public http: Http) {
+    constructor(public navCtrl: NavController, public formBuilder: FormBuilder, public service: ContactService, public http: Http, public toastCtrl: ToastController) {
       this.findAll();
     }
 
@@ -52,8 +53,22 @@ export class ActuCreatePage {
     this.http.post("https://biopineurs.herokuapp.com/actus/create", postParams, options)
       .subscribe(data => {
         console.log(postParams);
+        let toast = this.toastCtrl.create({
+                    message: 'Actualité postée',
+                    cssClass: 'mytoast',
+                    duration: 3000
+                });
+        toast.present(toast);
+        this.navCtrl.push(ActuListPage);
        }, error => {
         console.log(error);// Error getting the data
+        let toast = this.toastCtrl.create({
+                    message: 'Problème : vérifiez votre connexion',
+                    cssClass: 'mytoast',
+                    duration: 3000
+                });
+        toast.present(toast);
+        this.navCtrl.push(ActuListPage);
     });
   }
 }

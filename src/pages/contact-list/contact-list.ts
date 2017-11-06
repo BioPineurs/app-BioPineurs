@@ -34,7 +34,7 @@ export class ContactListPage {
         // if the value is an empty string don't filter the items
         if (val && val.trim() != '') {
           this.contacts = this.contacts.filter((contact) => {
-            return (contact.name.toLowerCase().indexOf(val.toLowerCase()) > -1);
+            return (contact.lastName.toLowerCase().indexOf(val.toLowerCase()) > -1);
           })
         }
     }

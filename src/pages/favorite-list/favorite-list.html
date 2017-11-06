@@ -3,23 +3,37 @@
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
         </button>
-        <ion-title>Favorites</ion-title>
+        <ion-title>Actualités enregistrées</ion-title>
     </ion-navbar>
 </ion-header>
 
+
 <ion-content>
+    
+
     <ion-list>
+
         <ion-item-sliding *ngFor="let favorite of favorites">
-            <button ion-item (click)="itemTapped(favorite)">
-                <ion-thumbnail item-left>
-                    <img src="{{favorite.actu.image}}"/>
-                </ion-thumbnail>
-                <h2>{{favorite.actu.title}}</h2>
-                <p>{{favorite.actu.createdAt}} ∙ {{favorite.actu.author}}</p>
-            </button>
-            <ion-item-options>
-                <button danger (click)="deleteItem(favorite)">Delete</button>
-            </ion-item-options>
+            <ion-item>
+                <ion-card>
+                    <ion-item>
+                    {{favorite.actu.title}}
+                    <p>{{favorite.actu.author}} - {{favorite.actu.createdAt}}</p>
+                    </ion-item>
+
+                    <button ion-item (click)="itemTapped(favorite)">
+                    <p>{{favorite.actu.body}}</p>        
+                    </button>
+
+                </ion-card>
+            </ion-item>
         </ion-item-sliding>
     </ion-list>
+
+<style>
+  .social-cards ion-col {
+    padding: 0;
+  }
+</style>
+
 </ion-content>

@@ -33,16 +33,16 @@ export class MyApp {
         this.initializeApp();
 
         this.appMenuItems = [
-            {title: 'Actus', component: ActuListPage, icon: 'bonfire'},
-            {title: 'Créer actu', component: ActuCreatePage, icon: 'bonfire'},
+            {title: 'Accueil', component: WelcomePage, icon: 'bookmark'},
             {title: 'En savoir plus sur le master', component: InformationPage, icon: 'bulb'},
+            {title: 'Actualités', component: ActuListPage, icon: 'flame'},
             {title: 'Annuaire', component: ContactListPage, icon: 'contacts'},
-            {title: 'Favorites', component: FavoriteListPage, icon: 'star'}
+            {title: 'Actualités enregistrées', component: FavoriteListPage, icon: 'star'}
         ];
 
         this.helpMenuItems = [
-            {title: 'Welcome', component: WelcomePage, icon: 'bookmark'},
-            {title: 'About', component: AboutPage, icon: 'information-circle'},
+            {title: 'Publier une actualité', component: ActuCreatePage, icon: 'create'},
+            {title: 'A propos', component: AboutPage, icon: 'information-circle'},
         ];
 
     }

@@ -1,38 +1,33 @@
 <ion-header>
     <ion-navbar>
-        <ion-title>Actualite</ion-title>
+        <ion-title>Actualité</ion-title>
     </ion-navbar>
 </ion-header>
 
 <ion-content>
+    <ion-fab top right edge>
+            <button ion-fab mini color="light"><ion-icon name="share"></ion-icon></button>
+                <ion-fab-list>
+                  <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+                  <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+                  <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+                  <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+                </ion-fab-list>
+    </ion-fab>
+
     <ion-card *ngIf="actu.id">
-        <img src="{{actu.image}}"/>
         <ion-card-content>
             <h2 class="card-title">{{actu.title}}</h2>
             <p>{{actu.author}}</p>
+            <p>{{actu.body}}</p>
         </ion-card-content>
-        <ion-list>
-            <ion-item>
-                <ion-icon item-left name="clock"></ion-icon>
-                <h3>Date</h3>
-                <ion-note item-right>{{actu.createdAt}}</ion-note>
-            </ion-item>
-            <ion-item>
-                <ion-icon item-left name="home"></ion-icon>
-                <h3>Venue</h3>
-                <ion-note item-right>{{actu.body}}</ion-note>
-            </ion-item>
-        </ion-list>
 
         <ion-item>
             <button ion-button icon-left (click)="favorite(actu)" clear item-left>
                 <ion-icon name="star"></ion-icon>
-                Favorite
+                Ajouter aux favoris
             </button>
-            <button ion-button icon-left (click)="share(actu)" clear item-right>
-                <ion-icon name="share"></ion-icon>
-                Share
-            </button>
+
         </ion-item>
 
     </ion-card>

@@ -38,7 +38,7 @@ export class ActuListPage {
         // if the value is an empty string don't filter the items
         if (val && val.trim() != '') {
           this.actus = this.actus.filter((actu) => {
-            return (actu.name.toLowerCase().indexOf(val.toLowerCase()) > -1);
+            return (actu.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
           })
         }
     }
@@ -55,32 +55,7 @@ export class ActuListPage {
             })
             .catch(error => alert(error));
     }
-/*
-    showMap() {
-        setTimeout(() => {
-            this.map = leaflet.map("map").setView([48.85, 2.35], 10);
-            leaflet.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
-                attribution: 'Tiles &copy; Esri'
-            }).addTo(this.map);
-            this.showMarkers();
-        })
-    }
 
-    showMarkers() {
-        if (this.markersGroup) {
-            this.map.removeLayer(this.markersGroup);
-        }
-        this.markersGroup = leaflet.layerGroup([]);
-        this.shows.forEach(show => {
-            if (show.lat, show.lng) {
-                let marker: any = leaflet.marker([show.lat, show.lng]).on('click', event => this.openShowDetail(event.target.data));
-                marker.data = show;
-                this.markersGroup.addLayer(marker);
-            }
-        });
-        this.map.addLayer(this.markersGroup);
-    }
-*/
   doRefresh(refresher) {
     console.log('Begin async operation', refresher);
 

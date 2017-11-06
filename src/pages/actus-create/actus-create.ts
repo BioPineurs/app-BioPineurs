@@ -18,8 +18,6 @@ export class ActuCreatePage {
   public title;
   public author;
   public body;
-//  title: Array<any>;
-//  body: Array<any>;
 
     constructor(public navCtrl: NavController, public formBuilder: FormBuilder, public service: ContactService, public http: Http) {
       this.findAll();

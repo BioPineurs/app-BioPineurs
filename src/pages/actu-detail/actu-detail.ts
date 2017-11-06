@@ -21,9 +21,9 @@ export class ActuDetailPage {
         this.ActuService.favorite(actu)
             .then(actu => {
                 let toast = this.toastCtrl.create({
-                    message: 'Actualite ajoutée aux favoris',
+                    message: 'Actualité ajoutée aux favoris',
                     cssClass: 'mytoast',
-                    duration: 1000
+                    duration: 3000
                 });
                 toast.present(toast);
             });
@@ -31,7 +31,7 @@ export class ActuDetailPage {
 
     share(actu) {
         let actionSheet: ActionSheet = this.actionSheetCtrl.create({
-            title: 'Share via',
+            title: 'Partager',
             buttons: [
                 {
                     text: 'Twitter',
@@ -46,7 +46,7 @@ export class ActuDetailPage {
                     handler: () => console.log('share via email')
                 },
                 {
-                    text: 'Cancel',
+                    text: 'Annueler',
                     role: 'cancel',
                     handler: () => console.log('cancel share')
                 }

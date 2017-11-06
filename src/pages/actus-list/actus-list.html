@@ -22,19 +22,21 @@
                     <img src="{{actu.image}}"/>
                 </ion-thumbnail>
             -->
-                    <ion-item>
-                       <h2>{{actu.author}}</h2>
-                       <p>{{actu.createdAt}}</p>
-                    </ion-item>
-                    <button ion-item (click)="openActuDetail(actu)">
-                    {{actu.title}}
-                    <p>{{actu.body}}</p>        
-                    </button>
-                    <ion-item-options>
-                        <button danger (click)="deleteItem(actu)">Delete</button>
-                    </ion-item-options>
+                <button ion-item (click)="openActuDetail(actu)">
+                        <ion-item>
+                        {{actu.title}}
+                        <p>{{actu.author}} - {{actu.createdAt}}</p>
+                        </ion-item>
+                        <p>{{actu.body}}</p>        
+                        
+
+                        <ion-item-options>
+                            <button danger (click)="deleteItem(actu)">Delete</button>
+                        </ion-item-options>
+                </button>
                 </ion-card>
             </ion-item>
+
         </ion-item-sliding>
     </ion-list>
 

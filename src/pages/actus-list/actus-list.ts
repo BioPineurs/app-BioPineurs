@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {Config, NavController} from 'ionic-angular';
+import {Config, NavController, NavParams, ToastController} from 'ionic-angular';
 import {ActuService} from '../../providers/actu-service-rest';
 import {ActuDetailPage} from '../actu-detail/actu-detail';
 import leaflet from 'leaflet';
@@ -20,12 +20,19 @@ export class ActuListPage {
     map;
     markersGroup;
 */
-    constructor(public navCtrl: NavController, public service: ActuService, public config: Config) {
-        this.findAll();
+    constructor(public navCtrl: NavController, public service: ActuService, public config: Config, public toastCtrl: ToastController) {
+        //this.findAll();
+        this.poll();
     }
 
     openActuDetail(actu: any) {
         this.navCtrl.push(ActuDetailPage, actu);
+    }
+
+    poll(){
+        this.findAll();
+        console.log('Polling page');
+        window.setTimeout(this.poll.bind(this), 5000); //en ms
     }
 
     onInput(event) {
@@ -57,11 +64,12 @@ export class ActuListPage {
     }
 
   doRefresh(refresher) {
-    console.log('Begin async operation', refresher);
+    console.log('Begin async refresh operation', refresher);
 
     setTimeout(() => {
-      console.log('Async operation has ended');
+      console.log('Async refresh operation has ended');
+      this.findAll();
       refresher.complete();
-    }, 2000);
+    }, 1000); //en ms
   }
 }

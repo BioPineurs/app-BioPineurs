@@ -21,7 +21,15 @@ export class ActuCreatePage {
   public body;
 
     constructor(public navCtrl: NavController, public formBuilder: FormBuilder, public service: ContactService, public http: Http, public toastCtrl: ToastController) {
-      this.findAll();
+      this.findAll(), error => {
+        console.log(error);// Error getting the data
+        let toast = this.toastCtrl.create({
+                    message: 'Problème : vérifiez votre connexion',
+                    cssClass: 'mytoast',
+                    duration: 30000
+                });
+        toast.present(toast);
+      }
     }
 
     findAll() {
@@ -68,7 +76,6 @@ export class ActuCreatePage {
                     duration: 3000
                 });
         toast.present(toast);
-        this.navCtrl.push(ActuListPage);
     });
   }
 }

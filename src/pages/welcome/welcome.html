@@ -10,15 +10,17 @@
 <ion-content no-bounce>
     <ion-slides>
         <ion-slide style="background-image: url('assets/img/imagine.png');">
-            <p>Apprenez-en plus sur le master</p>
+                <p><button (click)="openInformation()">Apprenez-en plus sur le master</button></p>
         </ion-slide>
 
         <ion-slide style="background-image: url('assets/img/research2.jpg')">
-            <p>Trouvez les coordonéees des alumni</p>
+            <p><button (click)="openContactList()">Trouvez les coordonéees des alumni</button></p>
         </ion-slide>
 
         <ion-slide style="background-image: url('assets/img/startup.jpg')">
-            <p>Suivez les actualités du secteur</p>
+            
+                <p><button (click)="openActuList()">Suivez les actualités du secteur</button></p>
+            
         </ion-slide>
     </ion-slides>
 

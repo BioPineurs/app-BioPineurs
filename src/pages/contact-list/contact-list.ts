@@ -34,7 +34,7 @@ export class ContactListPage {
         // if the value is an empty string don't filter the items
         if (val && val.trim() != '') {
           this.contacts = this.contacts.filter((contact) => {
-            return (contact.lastName.toLowerCase().indexOf(val.toLowerCase()) > -1);
+            return ((contact.firstName.toLowerCase().indexOf(val.toLowerCase()) > -1) || (contact.lastName.toLowerCase().indexOf(val.toLowerCase()) > -1));
           })
         }
     }
@@ -46,6 +46,7 @@ export class ContactListPage {
     findAll() {
         this.service.findAll()
             .then(data => {
+                //Faire boucle sur data ForEach data.fullName = data.firstName + ' ' + data.lastName
                 this.contacts = data;
                 this.contactsForSearch = data;
             })

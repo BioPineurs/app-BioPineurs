@@ -19,6 +19,7 @@ import {ContactService} from "../providers/contact-service-rest";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { Autosize } from '../directives/autosize/autosize';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactListPage,
     ContactDetailPage,
     FavoriteListPage,
-    InformationPage
+    InformationPage,
+    Autosize
   ],
   imports: [
     BrowserModule,

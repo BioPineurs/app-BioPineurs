@@ -29,7 +29,8 @@
 
     <ion-item>
       <ion-label color="primary">Contenu</ion-label>
-      <ion-input [(ngModel)]="body" type="text" placeholder="Racontez votre vie ici"></ion-input>
+      <!-- https://competenepal.com/elastic-text-area-component-in-ionic-framework/ -->
+      <ion-textarea  autosize [(ngModel)]="body" placeholder="Racontez votre vie ici"></ion-textarea>
     </ion-item>
   </ion-list>
    <button ion-button item-right (click)="postRequest()">Poster :)</button>

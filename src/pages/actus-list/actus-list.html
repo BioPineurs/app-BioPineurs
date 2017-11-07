@@ -16,12 +16,8 @@
 
         <ion-item-sliding *ngFor="let actu of actus">
             <ion-item>
+                <!--
                 <ion-card>
-            <!--
-                <ion-thumbnail item-left>
-                    <img src="{{actu.image}}"/>
-                </ion-thumbnail>
-            -->
                 <button ion-item (click)="openActuDetail(actu)">
                         <ion-item>
                         {{actu.title}}
@@ -36,7 +32,42 @@
                 </button>
                 </ion-card>
             </ion-item>
+-->
+<ion-card>
+<button ion-item (click)="openActuDetail(actu)">
+  <ion-item>
+    <ion-avatar item-left>
+    </ion-avatar>
+    <h2>{{actu.author}}</h2>
+    <p type="date">À {{actu.createdAt}}</p>
+  </ion-item>
 
+  <ion-card-content>
+    <p>{{actu.body}}</p>
+  </ion-card-content>
+
+  <ion-row>
+    <ion-col>
+      <button ion-button color="primary" clear small icon-start>
+        <ion-icon name='thumbs-up'></ion-icon>
+        1 Likes
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button color="primary" clear small icon-start>
+        <ion-icon name='text'></ion-icon>
+        0 Comments
+      </button>
+    </ion-col>
+    <ion-col align-self-center text-center>
+      <ion-note>
+        11h ago
+      </ion-note>
+    </ion-col>
+  </ion-row>
+</button>
+</ion-card>
+</ion-item>
         </ion-item-sliding>
     </ion-list>
 

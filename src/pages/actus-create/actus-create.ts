@@ -1,10 +1,11 @@
-import {Component, Injectable} from '@angular/core';
+import {Component, Injectable, ElementRef, Directive} from '@angular/core';
 import {ActuListPage} from '../actus-list/actus-list';
 import {FormGroup, FormBuilder, FormControl, Validators} from "@angular/forms";
 import {ActionSheetController, ActionSheet, NavController, NavParams, ToastController} from 'ionic-angular';
 import {Http, Headers, RequestOptions, Response} from '@angular/http';
 import {ActuService} from '../../providers/actu-service-rest';
 import {ContactService} from '../../providers/contact-service-rest';
+//import {Autosize} from '../../directives/autosize/autosize';
 
 
 @Component({
@@ -20,7 +21,7 @@ export class ActuCreatePage {
   public author;
   public body;
 
-    constructor(public navCtrl: NavController, public formBuilder: FormBuilder, public service: ContactService, public http: Http, public toastCtrl: ToastController) {
+    constructor(public element:ElementRef, public navCtrl: NavController, public formBuilder: FormBuilder, public service: ContactService, public http: Http, public toastCtrl: ToastController) {
       this.findAll(), error => {
         console.log(error);// Error getting the data
         let toast = this.toastCtrl.create({

@@ -34,7 +34,7 @@ export class MyApp {
 
         this.appMenuItems = [
             {title: 'Accueil', component: WelcomePage, icon: 'bookmark'},
-            {title: 'En savoir plus sur le master', component: InformationPage, icon: 'bulb'},
+            {title: 'En savoir plus sur le Master', component: InformationPage, icon: 'bulb'},
             {title: 'Actualités', component: ActuListPage, icon: 'flame'},
             {title: 'Annuaire', component: ContactListPage, icon: 'contacts'},
             {title: 'Actualités enregistrées', component: FavoriteListPage, icon: 'star'}
@@ -42,7 +42,7 @@ export class MyApp {
 
         this.helpMenuItems = [
             {title: 'Publier une actualité', component: ActuCreatePage, icon: 'create'},
-            {title: 'A propos', component: AboutPage, icon: 'information-circle'},
+            {title: 'À propos', component: AboutPage, icon: 'information-circle'},
         ];
 
     }

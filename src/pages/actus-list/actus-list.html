@@ -9,13 +9,13 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content class="actu-list">
+<ion-content class="actu-list" fullscreen>
     
 
     <ion-list *ngIf="viewMode==='list'">
 
         <ion-item-sliding *ngFor="let actu of actus">
-            <ion-item>
+            <ion-item detail-none>
                 <!--
                 <ion-card>
                 <button ion-item (click)="openActuDetail(actu)">
@@ -35,35 +35,37 @@
 -->
 <ion-card>
 <button ion-item (click)="openActuDetail(actu)">
-  <ion-item>
+  <ion-item detail-none>
     <ion-avatar item-left>
     </ion-avatar>
-    <h2>{{actu.author}}</h2>
+    <h2>{{actu.title}}</h2>
+    <h3>{{actu.author}}</h3>
     <p type="date">À {{actu.createdAt}}</p>
   </ion-item>
 
-  <ion-card-content>
-    <p>{{actu.body}}</p>
-  </ion-card-content>
-
+<ion-item text-wrap detail-none>
+    <p class="body">{{actu.body}}</p>
+</ion-item>
   <ion-row>
     <ion-col>
       <button ion-button color="primary" clear small icon-start>
-        <ion-icon name='thumbs-up'></ion-icon>
-        <p>1 Like</p>
+        <ion-icon class="like" name='thumbs-up'></ion-icon>
+        <p class="prop">1 Like</p>
       </button>
-    </ion-col>
-    <ion-col>
+
+
       <button ion-button color="primary" clear small icon-start>
-        <ion-icon name='text'></ion-icon>
-        <p>0 Comments</p>
+        <ion-icon class="comment" name='text'></ion-icon>
+        <p class="prop">0 Comment</p>
       </button>
     </ion-col>
+    <!--
     <ion-col align-self-center text-center>
       <ion-note>
         11h ago
       </ion-note>
     </ion-col>
+-->
   </ion-row>
 </button>
 </ion-card>

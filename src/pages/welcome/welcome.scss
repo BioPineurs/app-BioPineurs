@@ -1,50 +1,19 @@
-page-welcome {
+.card-background-page {
 
-  font-weight: 300;
-
-  ion-slide {
-
+  ion-card {
     position: relative;
-    background-size: cover;
-
-    p {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-color: #23415a;
-      color: #FFFFFF;
-      /*padding: 28px 28px 48px 28px;*/
-      padding-top: 28px;
-      padding-bottom: 28px;
-      background-size: cover;
-      font-size: 2.7rem;
-      margin-bottom: 28px;
-    }
-
-    button {
-      position: relative;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-color: rgba(163, 19, 178, 0);
-      color: #FFFFFF;
-      /*padding: 28px 28px 48px 28px;*/
-      font-size: 2.7rem;
-      margin-bottom: 0;
-      background-size: cover;
-    }
-
-    img {
-      width: 50px;
-      height: 50px;
-      margin-top: -150px
-    }
-
+    text-align: center;
+    
   }
 
-  .swiper-pagination-bullet {
-    background: white;
+  .card-title {
+    position: absolute;
+    top: 36%;
+    font-size: 2.0em;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
   }
 
 }
+

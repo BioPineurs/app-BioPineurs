@@ -7,6 +7,8 @@
     </ion-navbar>
 </ion-header>
 
+<!--
+
 <ion-content no-bounce>
     <ion-slides>
         <ion-slide style="background-image: url('assets/img/imagine.png');">
@@ -23,5 +25,33 @@
             
         </ion-slide>
     </ion-slides>
+
+</ion-content>
+
+-->
+
+<ion-content class="card-background-page">
+<button (click)="openInformation()" >
+  <ion-card>
+
+    <img src="assets/img/imagine.png"/>
+    <div class="card-title">En savoir plus sur le master</div>
+  </ion-card>
+</button>
+
+<button (click)="openContactList()" color="white">
+  <ion-card>
+    <img src="assets/img/research2.jpg"/>
+    <div class="card-title">Trouvez les coordonnées des Alumni</div>
+  </ion-card>
+</button>
+
+<button (click)="openActuList()">
+  <ion-card>
+    <img src="assets/img/startup.jpg"/>
+    <div class="card-title">Suivez les actualités du secteur</div>
+  </ion-card>
+</button>
+
 
 </ion-content>

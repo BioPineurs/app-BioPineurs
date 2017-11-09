@@ -27,9 +27,7 @@ export class WelcomePage {
         this.navCtrl.push(ContactListPage)
     }
 
-    ngAfterViewInit() {
-      this.slides.pager = true;
-    }
+
 
     openShowList() {
         this.navCtrl.push(ActuListPage);

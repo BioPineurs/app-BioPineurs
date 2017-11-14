@@ -3,7 +3,8 @@
   ion-card {
     position: relative;
     text-align: center;
-    
+    height : 180px;
+/*    width : contain;*/
   }
 
   .card-title {
@@ -15,9 +16,22 @@
     color: #fff;
   }
 
+  img {
+  height: 180px;
 }
 
 .center-cropped {
-	object-fit: cover;
+
+  width: 400px;
+  object-fit: cover;
+
 }
+
+
+     display: flex!important;
+     align-content: center!important;
+     align-items: center!important;
+
+}
+
 

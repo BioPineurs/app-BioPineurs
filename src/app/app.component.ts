@@ -34,10 +34,10 @@ export class MyApp {
 
         this.appMenuItems = [
             {title: 'Accueil', component: WelcomePage, icon: 'bookmark'},
-            {title: 'En savoir plus sur le Master', component: InformationPage, icon: 'bulb'},
+            {title: 'Informations', component: InformationPage, icon: 'bulb'},
             {title: 'Actualités', component: ActuListPage, icon: 'flame'},
             {title: 'Annuaire', component: ContactListPage, icon: 'contacts'},
-            {title: 'Actualités enregistrées', component: FavoriteListPage, icon: 'star'}
+            {title: 'Favoris', component: FavoriteListPage, icon: 'star'}
         ];
 
         this.helpMenuItems = [

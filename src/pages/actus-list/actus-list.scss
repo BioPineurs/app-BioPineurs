@@ -16,13 +16,18 @@ ion-icon.comment {
   margin-right: 5px;
 }
 
-.wrapping-list .item-content, .wrapping-list .item {
+.wrapping-list .item-content, .wrapping-list .item .ion-card{
     overflow: initial;
     white-space: initial;
 }
 
+ion-card-content{
+   white-space:normal
+}
+
 ion-card-content.body {
 	padding-bottom: 50px;
+  padding-left:0px;
  
 }
 
@@ -31,11 +36,7 @@ p.body {
 	height: 50px;
     overflow: hidden;
 }
-/*
-p.prop {
-	text-indent: 1em;
-}
-*/
+
 ion-row {
-	margin-bottom: -20px;
+	margin-bottom: -5px;
 }

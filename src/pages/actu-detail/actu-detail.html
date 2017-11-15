@@ -17,9 +17,12 @@
 
     <ion-card *ngIf="actu.id">
         <ion-card-content>
-            <h2 class="card-title">{{actu.title}}</h2>
-            <p>{{actu.author}}</p>
-            <p>{{actu.body}}</p>
+            <div class="titre">
+                <h2 class="card-title">{{actu.title}}</h2>
+                <p>{{actu.author}} - {{actu.createdAt}}</p>
+            </div>  
+
+                <p align="justify">{{actu.body}}</p>
         </ion-card-content>
 
         <ion-item>

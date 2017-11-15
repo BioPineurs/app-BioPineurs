@@ -32,7 +32,7 @@ export class ActuListPage {
     poll(){
         this.findAll();
         console.log('Polling page');
-        window.setTimeout(this.poll.bind(this), 5000); //en ms
+        //window.setTimeout(this.poll.bind(this), 5000); //en ms
     }
 
     onInput(event) {

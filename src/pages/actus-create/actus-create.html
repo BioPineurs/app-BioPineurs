@@ -4,7 +4,7 @@
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
         </button>
-        <ion-title>Raconte ta vie</ion-title>
+        <ion-title>Publier une actualité</ion-title>
     </ion-navbar>
 </ion-header>
  
@@ -30,7 +30,7 @@
     <ion-item>
       <ion-label color="primary">Contenu</ion-label>
       <!-- https://competenepal.com/elastic-text-area-component-in-ionic-framework/ -->
-      <ion-textarea  autosize [(ngModel)]="body" placeholder="Racontez votre vie ici"></ion-textarea>
+      <ion-textarea  autosize [(ngModel)]="body" placeholder="Corps du message"></ion-textarea>
     </ion-item>
   </ion-list>
    <button ion-button item-right (click)="postRequest()">Poster :)</button>

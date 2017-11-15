@@ -16,85 +16,45 @@
 
         <ion-item-sliding *ngFor="let actu of actus">
             <ion-item detail-none>
-                <!--
-                <ion-card>
-                <button ion-item (click)="openActuDetail(actu)">
-                        <ion-item>
-                        {{actu.title}}
-                        <p>{{actu.author}} - {{actu.createdAt}}</p>
-                        </ion-item>
-                        <p>{{actu.body}}</p>        
-                        
 
-                        <ion-item-options>
-                            <button danger (click)="deleteItem(actu)">Delete</button>
-                        </ion-item-options>
-                </button>
-                </ion-card>
+            <ion-card>
+            <button ion-item (click)="openActuDetail(actu)">
+                
+                <ion-card-content>
+                <h2>{{actu.title}}</h2>
+                <p>{{actu.author}} - {{actu.createdAt}}</p>
+                </ion-card-content>
+
+                <ion-item text-wrap detail-none>
+                    <p class="body">{{actu.body}}</p>
+                </ion-item>
+
+              <ion-row>
+                <ion-col>
+                  <button ion-button color="primary" clear small icon-start>
+                    <ion-icon class="like" name='thumbs-up'></ion-icon>
+                    <p class="prop">1 Like</p>
+                  </button>
+
+
+                  <button ion-button color="primary" clear small icon-start>
+                    <ion-icon class="comment" name='text'></ion-icon>
+                    <p class="prop">0 Comment</p>
+                  </button>
+
+                </ion-col>
+              </ion-row>
+
+            </button>
+
+            </ion-card>
+
             </ion-item>
--->
-<ion-card>
-<button ion-item (click)="openActuDetail(actu)">
-  <ion-item detail-none>
-    <ion-avatar item-left>
-    </ion-avatar>
-    <h2>{{actu.title}}</h2>
-    <h3>{{actu.author}}</h3>
-    <p type="date">À {{actu.createdAt}}</p>
-  </ion-item>
-
-<ion-item text-wrap detail-none>
-    <p class="body">{{actu.body}}</p>
-</ion-item>
-  <ion-row>
-    <ion-col>
-      <button ion-button color="primary" clear small icon-start>
-        <ion-icon class="like" name='thumbs-up'></ion-icon>
-        <p class="prop">1 Like</p>
-      </button>
-
-
-      <button ion-button color="primary" clear small icon-start>
-        <ion-icon class="comment" name='text'></ion-icon>
-        <p class="prop">0 Comment</p>
-      </button>
-    </ion-col>
-    <!--
-    <ion-col align-self-center text-center>
-      <ion-note>
-        11h ago
-      </ion-note>
-    </ion-col>
--->
-  </ion-row>
-</button>
-</ion-card>
-</ion-item>
+        
         </ion-item-sliding>
+   
     </ion-list>
-
-<!--
-    <div *ngIf="viewMode==='map'" style="width:100%;height:100%;" id="map"></div>
--->
-
-<style>
-  .social-cards ion-col {
-    padding: 0;
-  }
-</style>
 
 <ion-refresher (ionRefresh)="doRefresh($event)"><ion-refresher-content></ion-refresher-content>
     </ion-refresher>
 </ion-content>
-<!--
-<ion-footer padding>
-    <ion-segment [(ngModel)]="viewMode">
-        <ion-segment-button value="list">
-            <ion-icon name="list"></ion-icon>
-        </ion-segment-button>
-        <ion-segment-button value="map" (ionSelect)="showMap()">
-            <ion-icon name="map"></ion-icon>
-        </ion-segment-button>
-    </ion-segment>
-</ion-footer>
--->

@@ -31,27 +31,27 @@
 -->
 
 <ion-content text-center class="card-background-page">
-
-<button (click)="openInformation()" >
+<ion-list>
+<button (click)="openInformation()" class="transparent">
   <ion-card>
     <img src="assets/img/imagine.png" class="center-cropped"/>
     <div class="card-title">En savoir plus sur le master</div>
   </ion-card>
 </button>
 
-<button (click)="openContactList()">
+<button (click)="openContactList()" class="transparent">
   <ion-card>
     <img src="assets/img/research2.jpg" class="center-cropped"/>
     <div class="card-title">Trouvez les coordonnées des Alumni</div>
   </ion-card>
 </button>
 
-<button (click)="openActuList()">
+<button (click)="openActuList()" class="transparent">
   <ion-card>
     <img src="assets/img/startup.jpg" class="center-cropped"/>
     <div class="card-title">Suivez les actualités du secteur</div>
   </ion-card>
 </button>
-
+</ion-list>
 
 </ion-content>

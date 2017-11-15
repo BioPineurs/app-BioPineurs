@@ -3,7 +3,7 @@
   ion-card {
     position: relative;
     text-align: center;
-    height : 180px;
+    /*height : 180px;*/
 /*    width : contain;*/
   }
 
@@ -15,23 +15,26 @@
     font-weight: bold;
     color: #fff;
   }
-
+/*
   img {
   height: 180px;
-}
-
+  }
+*/
 .center-cropped {
-
+/*
   width: 400px;
   object-fit: cover;
-
+*/
 }
 
-
+/*
      display: flex!important;
      align-content: center!important;
      align-items: center!important;
-
+*/
 }
 
+.transparent {
+  background-color: transparent;
+}
 

@@ -4,7 +4,7 @@
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
         </button>
-        <ion-searchbar [(ngModel)]="searchKey" (ionInput)="onInput($event)"
+        <ion-searchbar placeholder="Rechercher" [(ngModel)]="searchKey" (ionInput)="onInput($event)"
                        (ionCancel)="onCancel($event)"></ion-searchbar>
     </ion-navbar>
 </ion-header>

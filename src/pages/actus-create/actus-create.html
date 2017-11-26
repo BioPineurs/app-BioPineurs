@@ -22,7 +22,7 @@
   -->
   <ion-item>
     <ion-label color="primary">Auteur</ion-label>
-    <ion-select [(ngModel)]="author" placeholder="Appuyez pour choisir" class="decalage">
+    <ion-select [(ngModel)]="author" placeholder="Sélectionner" class="decalage">
         <ion-option *ngFor="let contact of contacts">{{contact.firstName}} {{contact.lastName}}</ion-option>
     </ion-select>
   </ion-item>
@@ -33,5 +33,5 @@
       <ion-textarea  autosize [(ngModel)]="body" placeholder="Corps du message"></ion-textarea>
     </ion-item>
   </ion-list>
-   <button ion-button item-right (click)="postRequest()">Poster :)</button>
+   <button ion-button full center item-right (click)="postRequest()">Poster :)</button>
 </ion-content>
